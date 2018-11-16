@@ -20,13 +20,19 @@ namespace IRRCMS
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap-rtl.js"));
+                      "~/Scripts/bootstrap-rtl.js", "~/Scripts/hoverex.min.js",
+                      "~/Scripts/hoverdir.js", "~/Scripts/isotope.min.js",
+                      "~/Content/prettyphoto/js/prettyphoto.js", "~/Scripts/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-rtl.css",
-                      "~/Content/bootstrap-theme-rtl.css",
+                      "~/Content/bootstrap-rtl.css",                      
                       "~/Fonts/vazir.css",
-                      "~/Content/site.css"));
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/prettyphoto/css/prettyphoto.css",
+                      "~/Content/hoverex-all.css",
+                      "~/Content/style.css"));
+
+            BundleTable.EnableOptimizations = false;
 
         }
     }
