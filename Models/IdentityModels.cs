@@ -18,16 +18,28 @@ namespace IRRCMS.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class IrrcmsDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public IrrcmsDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
-        {
+        {            
         }
 
-        public static ApplicationDbContext Create()
+        public static IrrcmsDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new IrrcmsDbContext();
+        }
+
+        public DbSet<Person> People { get; set; }
+        public DbSet<BuildingUnit> BuildingUnits { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Person>()
+                .ToTable("Person");
+            modelBuilder.Entity<BuildingUnit>()
+                .ToTable("BuildingUnit");
         }
     }
 }
