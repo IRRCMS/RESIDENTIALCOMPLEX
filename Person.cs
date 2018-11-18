@@ -29,5 +29,6 @@ namespace IRRCMS
         public string EmailAddress { get; set; }
         [Display(Name ="وضعیت تاهل"),MaxLength(10)]
         public string MartialStatus { get; set; }
+        public virtual List<ResidentsCar> ResidentsCar { get; set; }
     }
 }
