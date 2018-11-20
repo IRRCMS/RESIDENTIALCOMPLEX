@@ -40,6 +40,7 @@ namespace IRRCMS.Models
                 .ToTable("Person");
             modelBuilder.Entity<BuildingUnit>()
                 .ToTable("BuildingUnit");
+
         }
     }
 }

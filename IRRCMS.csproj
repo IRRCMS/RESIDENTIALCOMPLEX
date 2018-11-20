@@ -203,7 +203,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="BuildingUnit.cs" />
+    <Compile Include="Migrations\201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.cs" />
+    <Compile Include="Migrations\201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.Designer.cs">
+      <DependentUpon>201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelsClasses\BuildingUnit.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -226,14 +230,17 @@
     <Compile Include="Migrations\201811160443182_set_person_martial_status_to_10_character.Designer.cs">
       <DependentUpon>201811160443182_set_person_martial_status_to_10_character.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.cs" />
+    <Compile Include="Migrations\201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.Designer.cs">
+      <DependentUpon>201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="EntityModelsClasses\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResidentsCar.cs" />
-    <Compile Include="Role.cs" />
+    <Compile Include="EntityModelsClasses\ResidentsCar.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -429,6 +436,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811160443182_set_person_martial_status_to_10_character.resx">
       <DependentUpon>201811160443182_set_person_martial_status_to_10_character.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.resx">
+      <DependentUpon>201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.resx">
+      <DependentUpon>201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
