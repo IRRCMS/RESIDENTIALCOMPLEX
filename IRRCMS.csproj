@@ -257,6 +257,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\hoverex-all.css" />
+    <Content Include="Content\main.css" />
     <Content Include="Content\prettyphoto\css\prettyphoto.css" />
     <Content Include="Content\prettyphoto\images\prettyPhoto\dark_rounded\btnNext.png" />
     <Content Include="Content\prettyphoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
