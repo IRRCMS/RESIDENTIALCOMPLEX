@@ -203,6 +203,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="EntityModelsClasses\Cost.cs" />
+    <Compile Include="EntityModelsClasses\Resident.cs" />
     <Compile Include="Migrations\201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.cs" />
     <Compile Include="Migrations\201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.Designer.cs">
       <DependentUpon>201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class.cs</DependentUpon>

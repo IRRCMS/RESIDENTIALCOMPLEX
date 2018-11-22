@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRRCMS.EntityModelsClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -57,5 +58,6 @@ namespace IRRCMS
             }
         }
         public ICollection<Person> Owners { get; set; }
+        public Resident Resident { get; set; }
     }
 }

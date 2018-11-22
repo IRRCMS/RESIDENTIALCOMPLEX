@@ -30,7 +30,8 @@ namespace IRRCMS
                       "~/Content/hoverex-all.css",
                       "~/Content/font-awesome.min.css",
                       "~/Fonts/vazir.css",
-                      "~/Content/style.css"));
+                      "~/Content/style.css",
+                      "~/Content/main.css"));
 
             BundleTable.EnableOptimizations = false;
 

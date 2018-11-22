@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using IRRCMS.EntityModelsClasses;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -50,6 +51,10 @@ namespace IRRCMS.Models
                         {
                             pb.ToTable("Building_Owner");
                         });
+
+            modelBuilder.Entity<Resident>()
+               .HasRequired(r => r.Person)
+               .WithOptional(p => p.Resident);
         }
     }
 }

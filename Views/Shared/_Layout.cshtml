@@ -13,51 +13,60 @@
 
 
 </head>
-<body data-spy="scroll" data-offset="58" data-target="#navigation">
-
+<body class="container-fluid" data-spy="scroll" data-offset="58" data-target="#navigation">
     <!-- Fixed navbar -->
     <header class="navbar navbar-default navbar-fixed-top" role="navigation">
         <nav class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">نرم‌افزار مدیریت مجتمع‌های مسکونی</a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">نرم‌افزار مدیریت مجتمع‌های مسکونی</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-            </div>
+                </div>
 
-            <div class="navbar-collapse collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">خانه</a></li>
-                    <li><a href="about.html">درباره</a></li>
-                    <li><a href="contact.html">اطلاعات تماس</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">بخشهای سایت <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog.html">BLOG</a></li>
-                            <li><a href="single-post.html">SINGLE POST</a></li>
-                            <li><a href="portfolio.html">PORTFOLIO</a></li>
-                            <li><a href="single-project.html">SINGLE PROJECT</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">خانه</a></li>
+                        <li><a href="about.html">درباره</a></li>
+                        <li><a href="contact.html">اطلاعات تماس</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">بخشهای سایت <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">BLOG</a></li>
+                                <li><a href="single-post.html">SINGLE POST</a></li>
+                                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                                <li><a href="single-project.html">SINGLE PROJECT</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a class="nav navbar-nav navbar-default vorood float" href="#">ورود/عضویت</a>
+
+
+                <!--/.nav-collapse -->
             </div>
+<<<<<<< HEAD
             <a class="nav navbar-nav navbar-left vorood navbar-collapse collapse" href="#">ورود/عضویت</a>
 
 
             <!--/.nav-collapse -->
+=======
+>>>>>>> f15b343a9ca2b0586e0a3ddbe266f03b6f65ae4f
         </nav>
     </header>
+    <div class="container" id="Renderpart">
 
-
-    @RenderBody()
-    <!-- *****************************************************************************************************************
+        @RenderBody()
+        <!-- *****************************************************************************************************************
        FOOTER
        ***************************************************************************************************************** -->
+    </div>
     <footer id="footer" class="top-space">
 
         <div class="footer1">
@@ -65,7 +74,7 @@
                 <div class="row">
 
                     <div class="col-md-3 widget">
-                        <h3 class="widget-title">Contact</h3>
+                        <h3 class="widget-title">اطلاعات تماس</h3>
                         <div class="widget-body">
                             <p>
                                 +234 23 9873237<br>
@@ -76,8 +85,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Follow me</h3>
+                    <div class="col-md-3 widget" id="FollowMeApp">
+                        <h3 class="widget-title">مارا دنبال کنید</h3>
                         <div class="widget-body">
                             <p class="follow-me-icons">
                                 <a href=""><i class="fa fa-twitter fa-2"></i></a>
