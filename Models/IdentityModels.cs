@@ -50,6 +50,10 @@ namespace IRRCMS.Models
                         {
                             pb.ToTable("Building_Owner");
                         });
+
+            modelBuilder.entity<>(Resident)
+               .HasRequired(r => r.Person)
+               .withoptional(p => p.Resident);
         }
     }
 }

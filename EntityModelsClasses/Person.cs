@@ -31,5 +31,6 @@ namespace IRRCMS
         public string MartialStatus { get; set; }
         public virtual List<ResidentsCar> ResidentsCars { get; set; }
         public virtual ICollection<BuildingUnit> BuildingUnits { get; set; }
+        public virtual Resident residnet { get; set; }
     }
 }

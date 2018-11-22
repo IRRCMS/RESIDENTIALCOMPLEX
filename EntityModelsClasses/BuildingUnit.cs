@@ -57,5 +57,6 @@ namespace IRRCMS
             }
         }
         public ICollection<Person> Owners { get; set; }
+        public Resident resident { get; set; }
     }
 }
