@@ -3,11 +3,14 @@
     padding: 0px !important;
 }
 #Renderpart {
-    margin-top: 80px !important;
+    margin-top: 86px !important;
 }
 #FollowMeApp h3 {
     margin-right: 9px !important;
 }
 #FollowMeApp .widget-body p {
     float: right !important;
+}
+#DropDownMenu {
+    float:right !important;
 }
