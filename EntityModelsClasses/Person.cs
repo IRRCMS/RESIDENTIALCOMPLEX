@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRRCMS.EntityModelsClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -31,6 +32,6 @@ namespace IRRCMS
         public string MartialStatus { get; set; }
         public virtual List<ResidentsCar> ResidentsCars { get; set; }
         public virtual ICollection<BuildingUnit> BuildingUnits { get; set; }
-        public virtual Resident residnet { get; set; }
+        public virtual Resident Resident { get; set; }
     }
 }
