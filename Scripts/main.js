@@ -8,11 +8,9 @@ jQuery(document).ready(function( $ ) {
     }
     });
 
-    if ($(window).width() < 768) { 
-
-        $('.vorood').removeClass('float');
-        alert('<768');
-    }
+    $(window).resize(function () {
+        $('.vorood').toggleClass("vorood-collapse");
+    })        
 
 
   $('a[data-gal]').each(function() {

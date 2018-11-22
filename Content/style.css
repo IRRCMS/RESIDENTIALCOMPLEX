@@ -97,8 +97,7 @@ a:focus {
 }*/
 
 .navbar-header .navbar-brand {
-    color: white;
-    
+    color: white;   
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -107,14 +106,13 @@ a:focus {
 	font-size: 12px;
 }
 .vorood {
-    
     color: white;
     font-weight: 700;
     font-size: 12px;
+    margin-top: 15px;
 }
-.float {
-    float: left;
-    margin-top:15px;
+.vorood-collapse{
+    margin-top:0px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
