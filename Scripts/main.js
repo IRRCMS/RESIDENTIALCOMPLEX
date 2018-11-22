@@ -8,9 +8,9 @@ jQuery(document).ready(function( $ ) {
     }
     });
 
-    $(window).resize(function () {
-        $('.vorood').toggleClass("vorood-collapse");
-    })        
+    //$(window).resize(function () {
+    //    $('.vorood').toggleClass("vorood-collapse");
+    //})        
 
 
   $('a[data-gal]').each(function() {
