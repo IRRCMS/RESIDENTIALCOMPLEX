@@ -6,7 +6,13 @@ jQuery(document).ready(function( $ ) {
     } else {
       $('.navbar').removeClass('navbar-scrolled');
     }
-  });
+    });
+
+    if ($(window).width() < 768) { 
+
+        $('.vorood').removeClass('float');
+        alert('<768');
+    }
 
 
   $('a[data-gal]').each(function() {

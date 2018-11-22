@@ -56,6 +56,6 @@ namespace IRRCMS
                 }                
             }
         }
-
+        public ICollection<Person> Owners { get; set; }
     }
 }

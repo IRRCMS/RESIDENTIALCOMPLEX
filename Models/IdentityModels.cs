@@ -40,7 +40,16 @@ namespace IRRCMS.Models
                 .ToTable("Person");
             modelBuilder.Entity<BuildingUnit>()
                 .ToTable("BuildingUnit");
+            modelBuilder.Entity<ResidentsCar>()
+                .ToTable("ResidentsCar");
 
+            modelBuilder.Entity<Person>()
+                .HasMany<BuildingUnit>(p => p.BuildingUnits)
+                .WithMany(b => b.Owners)
+                .Map(pb =>
+                        {
+                            pb.ToTable("Building_Owner");
+                        });
         }
     }
 }

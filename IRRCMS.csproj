@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.Designer.cs">
       <DependentUpon>201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.cs" />
+    <Compile Include="Migrations\201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.Designer.cs">
+      <DependentUpon>201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -442,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.resx">
       <DependentUpon>201811200721343_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.resx">
+      <DependentUpon>201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

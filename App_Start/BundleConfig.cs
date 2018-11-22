@@ -25,11 +25,11 @@ namespace IRRCMS
                       "~/Content/prettyphoto/js/prettyphoto.js", "~/Scripts/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-rtl.css",                      
-                      "~/Fonts/vazir.css",
-                      "~/Content/font-awesome.min.css",
+                      "~/Content/bootstrap-rtl.css",                     
                       "~/Content/prettyphoto/css/prettyphoto.css",
                       "~/Content/hoverex-all.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Fonts/vazir.css",
                       "~/Content/style.css"));
 
             BundleTable.EnableOptimizations = false;
