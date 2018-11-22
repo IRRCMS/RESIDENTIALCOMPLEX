@@ -305,6 +305,7 @@
     <Content Include="img\agency.jpg" />
     <Content Include="img\apple-touch-icon.png" />
     <Content Include="img\browser.png" />
+    <Content Include="img\building.jpg" />
     <Content Include="img\clients\client01.png" />
     <Content Include="img\clients\client02.png" />
     <Content Include="img\clients\client03.png" />
