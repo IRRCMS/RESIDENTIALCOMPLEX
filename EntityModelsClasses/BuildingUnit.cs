@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,8 +11,10 @@ namespace IRRCMS
     public class BuildingUnit
     {
         public int Id { get; set; }
-        [Required]
+        [Required,Display(Name ="مساحت")]
         public float Area { get; set; }
+        [Display(Name = "شماره واحد")]
+        public string UnitNo { get; set; }
 
         private int monthlyCharge;
         [Display(Name ="شارژ ماهیانه")]
@@ -57,6 +60,8 @@ namespace IRRCMS
                 }                
             }
         }
+        
+        public int PersonId { get; set; }
         public ICollection<Person> Owners { get; set; }
         public Resident Resident { get; set; }
     }

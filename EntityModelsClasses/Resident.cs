@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,14 +9,16 @@ namespace IRRCMS.EntityModelsClasses
 {
     public class Resident
     {
-        public int Id { get; set; }
-        [Required, Display(Name = "شماره واحد")]
-        public int UnitId { get; set; }
-        [Required, Display(Name = "شماره ساکن")]
-        public int PersonId { get; set; }
+        [ForeignKey("Person")]
+        public int ResidentId { get; set; }
+
         [Required, Display(Name = "تعداد ساکنین")]
-        public int Numofoccupants { get; set; }
+        public int NumOfOccupants { get; set; }
+
         public virtual Person Person { get; set; }
+
         public List<BuildingUnit> Units { get; set; }
+        [ForeignKey("Units")]
+        public int BuildingUnitId { get; set; }
     }
 }

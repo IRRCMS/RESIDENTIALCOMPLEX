@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web.Razor.Parser;
 using IRRCMS.EntityModelsClasses;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -31,8 +32,9 @@ namespace IRRCMS.Models
             return new IrrcmsDbContext();
         }
 
-        public DbSet<Person> People { get; set; }
-        public DbSet<BuildingUnit> BuildingUnits { get; set; }
+        //public DbSet<Person> People { get; set; }
+        //public DbSet<BuildingUnit> BuildingUnits { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -43,6 +45,10 @@ namespace IRRCMS.Models
                 .ToTable("BuildingUnit");
             modelBuilder.Entity<ResidentsCar>()
                 .ToTable("ResidentsCar");
+            modelBuilder.Entity<Cost>()
+                .ToTable("Cost");
+            modelBuilder.Entity<Resident>()
+                .ToTable("Resident");
 
             modelBuilder.Entity<Person>()
                 .HasMany<BuildingUnit>(p => p.BuildingUnits)
@@ -55,6 +61,11 @@ namespace IRRCMS.Models
             modelBuilder.Entity<Resident>()
                .HasRequired(r => r.Person)
                .WithOptional(p => p.Resident);
+
+            modelBuilder.Entity<Resident>()
+                .HasRequired<Person>(p => p.Person)
+                .WithRequiredPrincipal(r => r.Resident);
+
         }
     }
 }

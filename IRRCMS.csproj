@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.Designer.cs">
       <DependentUpon>201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811231245504_some_refinements_in_models.cs" />
+    <Compile Include="Migrations\201811231245504_some_refinements_in_models.Designer.cs">
+      <DependentUpon>201811231245504_some_refinements_in_models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -378,6 +382,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -453,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.resx">
       <DependentUpon>201811221006109_added_owner_column_to_the_Buildingunit_entity_Class_and_the_corresponding_Relationships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811231245504_some_refinements_in_models.resx">
+      <DependentUpon>201811231245504_some_refinements_in_models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
