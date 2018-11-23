@@ -47,22 +47,23 @@
                     </ul>
                 </div>
 
-                <a class="navbar-nav navbar-left vorood navbar-collapse collapse" href="#">ورود/عضویت</a>
+                <a class="navbar-nav navbar-left vorood navbar-collapse collapse" href=@Url.Action("Register","Account")>ورود/عضویت</a>
                 <!--/.nav-collapse -->
             </div>
+
             
 
 
             <!--/.nav-collapse -->
         </nav>
     </header>
-    @*<div class="container" id="Renderpart">*@
+    <main class="container">
 
         @RenderBody()
         <!-- *****************************************************************************************************************
        FOOTER
        ***************************************************************************************************************** -->
-    </div>
+    </main>
     <footer id="footer" class="top-space">
 
         <div class="footer1">

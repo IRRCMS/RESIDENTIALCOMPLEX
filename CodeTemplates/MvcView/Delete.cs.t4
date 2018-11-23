@@ -12,7 +12,7 @@ if(IsPartialView) {
 #>
 
 @{
-    ViewBag.Title = "<#= ViewName#>";
+    ViewBag.Title = "حذف";
 <#
 if (!String.IsNullOrEmpty(LayoutPageFile)) {
 #>
@@ -22,7 +22,7 @@ if (!String.IsNullOrEmpty(LayoutPageFile)) {
 #>
 }
 
-<h2><#= ViewName#></h2>
+<h2>حذف</h2>
 
 <#
 } else {
@@ -37,14 +37,14 @@ if (!String.IsNullOrEmpty(LayoutPageFile)) {
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title><#= ViewName #></title>
+    <title>حذف</title>
 </head>
 <body>
 <#
     PushIndent("    ");
 }
 #>
-<h3>Are you sure you want to delete this?</h3>
+<h3>آیا از حذف این رکورد اطمینان دارید؟</h3>
 <div>
     <h4><#= ViewDataTypeShortName #></h4>
     <hr />
@@ -78,8 +78,8 @@ foreach (PropertyMetadata property in ModelMetadata.Properties) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به لیست", "Index")
         </div>
     }
 </div>

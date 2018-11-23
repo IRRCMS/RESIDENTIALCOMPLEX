@@ -32,9 +32,6 @@ namespace IRRCMS.Models
             return new IrrcmsDbContext();
         }
 
-        //public DbSet<Person> People { get; set; }
-        //public DbSet<BuildingUnit> BuildingUnits { get; set; }
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
