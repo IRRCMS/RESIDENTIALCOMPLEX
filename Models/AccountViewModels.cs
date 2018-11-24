@@ -58,7 +58,7 @@ namespace IRRCMS.Models
         [Display(Name = "رمز عبور")]
         public string Password { get; set; }
 
-        [Display(Name = "مرا به خاطر بسپار؟")]
+        [Display(Name = "مرا به خاطر بسپار")]
         public bool RememberMe { get; set; }
     }
 
@@ -70,14 +70,14 @@ namespace IRRCMS.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "رمز عبور")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "تکرار رمز عبور")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "تکرار رمز عبور وارد شده با رمز وارد شده مطابقت ندارد")]
         public string ConfirmPassword { get; set; }
     }
 
