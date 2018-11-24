@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">نرم‌افزار مدیریت مجتمع‌های مسکونی</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"  id="DropDownMenu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="DropDownMenu">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -47,7 +47,9 @@
                     </ul>
                 </div>
 
-                <a class="navbar-nav navbar-left vorood navbar-collapse collapse" href=@Url.Action("Register","Account")>ورود/عضویت</a>
+               <a   class="navbar-nav navbar-left vorood navbar-collapse collapse RegisterLink " href=@Url.Action("Register","Account")> عضویت</a>
+               <a class="navbar-nav navbar-left vorood navbar-collapse collapse LoginLink  " href="@Url.Action("Login","Account")"> ورود</a>
+
                 <!--/.nav-collapse -->
             </div>
 

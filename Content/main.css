@@ -14,3 +14,10 @@
 #DropDownMenu {
     float:right !important;
 }
+.RegisterLink , .LoginLink {
+    padding:15px !important;
+    margin:0px !important;
+}
+.LoginLink {
+    border-top:none !important;
+}
