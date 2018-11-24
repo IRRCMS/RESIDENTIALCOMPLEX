@@ -47,15 +47,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="vorood navbar-left  navbar-collapse collapse RegisterLink">
-                        <a  href=@Url.Action("Register","Account")> عضویت</a>
-                        <a  href="@Url.Action("Login","Account")"> ورود</a>
-                    </div>
                     <!--/.nav-collapse -->
                 </div>
 
-
-
+                @Html.Partial("_LoginPartial")
+                
 
                 <!--/.nav-collapse -->
             </nav>
