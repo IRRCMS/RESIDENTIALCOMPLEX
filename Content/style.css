@@ -63,6 +63,14 @@ img {
 	max-width: 100%;
 }
 
+.vorood > a {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+
 a {
 	padding: 0;
 	margin: 0;
@@ -73,6 +81,7 @@ a {
 	-ms-transition: background-color .4s linear, color .4s linear;
 	transition: background-color .4s linear, color .4s linear;
 }
+
 a:hover,
 a:focus {
   text-decoration: none;
@@ -127,15 +136,6 @@ a:focus {
 	font-weight: 700;
 	font-size: 12px;
 }
-.vorood {
-    color: white;
-    font-weight: 700;
-    font-size: 12px;
-    margin-top: 15px;
-}
-/*.vorood-collapse{
-    margin-top:0px;
-}*/
 
 .navbar-default .navbar-nav > li > a:hover {
 	color: #00b3fe;
