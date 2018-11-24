@@ -26,7 +26,11 @@ namespace IRRCMS.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {            
         }
-
+        public virtual DbSet<BuildingUnit> BuildingUnits { get; set; }
+        public virtual IDbSet<Cost> Costs { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Resident> Residents { get; set; }
+        public virtual DbSet<ResidentsCar> ResidentsCars { get; set; }
         public static IrrcmsDbContext Create()
         {
             return new IrrcmsDbContext();
