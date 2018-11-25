@@ -18,6 +18,7 @@ namespace IRRCMS.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public Person Person { get; set; }
     }
 
     public class IrrcmsDbContext : IdentityDbContext<ApplicationUser>
@@ -67,6 +68,9 @@ namespace IRRCMS.Models
                 .HasRequired<Person>(p => p.Person)
                 .WithRequiredPrincipal(r => r.Resident);
 
+            modelBuilder.Entity<ApplicationUser>()
+                .HasOptional<Person>(p => p.Person)
+                .WithOptionalPrincipal(ap => ap.User);
         }
     }
 }

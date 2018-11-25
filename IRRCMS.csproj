@@ -244,6 +244,10 @@
     <Compile Include="Migrations\201811231245504_some_refinements_in_models.Designer.cs">
       <DependentUpon>201811231245504_some_refinements_in_models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811251628057_person_to_applicationuser_relationship.cs" />
+    <Compile Include="Migrations\201811251628057_person_to_applicationuser_relationship.Designer.cs">
+      <DependentUpon>201811251628057_person_to_applicationuser_relationship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -474,6 +478,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811231245504_some_refinements_in_models.resx">
       <DependentUpon>201811231245504_some_refinements_in_models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811251628057_person_to_applicationuser_relationship.resx">
+      <DependentUpon>201811251628057_person_to_applicationuser_relationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

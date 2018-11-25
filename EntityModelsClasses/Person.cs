@@ -1,4 +1,5 @@
 ﻿using IRRCMS.EntityModelsClasses;
+using IRRCMS.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -33,5 +34,6 @@ namespace IRRCMS
         public virtual List<ResidentsCar> ResidentsCars { get; set; }
         public virtual ICollection<BuildingUnit> BuildingUnits { get; set; }
         public virtual Resident Resident { get; set; }
+        public ApplicationUser User { get; set; }
     }
 }
