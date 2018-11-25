@@ -16,6 +16,7 @@ body {
     font-weight: 400;
 }
 
+
 .content:before {
     content: "";
     position: fixed;
@@ -63,12 +64,6 @@ img {
 	max-width: 100%;
 }
 
-.vorood > a {
-    color: white;
-    font-weight: 700;
-    font-size: 12px;
-    margin-top: 15px;
-}
 
 
 a {
@@ -137,9 +132,23 @@ a:focus {
 	font-size: 12px;
 }
 
+.navbar-nav > a {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    
+}
+.navbar-left{
+    margin-top:15px;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
 	color: #00b3fe;
 	background: none;
+}
+.navbar-nav > a:hover {
+    color: #00b3fe;
+    background: none;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -189,7 +198,8 @@ a:focus {
 	color: #fff;
 	font-size: 22px;
   }
-  
+
+
 
 .btn-theme {
   color: #fff;
