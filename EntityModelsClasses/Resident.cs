@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IRRCMS.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,16 +10,20 @@ namespace IRRCMS.EntityModelsClasses
 {
     public class Resident
     {
-        [ForeignKey("Person")]
-        public int ResidentId { get; set; }
+        
+        public int Id { get; set; }        
 
         [Required, Display(Name = "تعداد ساکنین")]
         public int NumOfOccupants { get; set; }
 
-        public virtual Person Person { get; set; }
+        //This property is defined as ForeinKey of ApplicationUser with fluent API.
+        public string User_Id { get; set; }
+        public ApplicationUser User { get; set; }
 
-        public List<BuildingUnit> Units { get; set; }
-        [ForeignKey("Units")]
-        public int BuildingUnitId { get; set; }
+        //This property is defined as ForeinKey of BuildingUnit with fluent API.
+        public int BuildingUnit_Id { get; set; }
+        public BuildingUnit BuildingUnit { get; set; }
+
+        public ICollection<ResidentsCar> ResidentsCars { get; set; }
     }
 }

@@ -61,8 +61,10 @@ namespace IRRCMS
             }
         }
         
-        public int PersonId { get; set; }
+        public int OwnerId { get; set; }
         public ICollection<Person> Owners { get; set; }
-        public Resident Resident { get; set; }
+
+        public int ResidentId { get; set; }
+        public ICollection<Resident> Residents { get; set; }
     }
 }

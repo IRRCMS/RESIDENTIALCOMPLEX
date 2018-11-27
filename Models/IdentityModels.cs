@@ -1,4 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Razor.Parser;
@@ -18,6 +21,9 @@ namespace IRRCMS.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public ICollection<Resident> Residents { get; set; }
+
         public Person Person { get; set; }
     }
 
@@ -27,11 +33,12 @@ namespace IRRCMS.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {            
         }
-        public virtual DbSet<BuildingUnit> BuildingUnits { get; set; }
+        public virtual IDbSet<BuildingUnit> BuildingUnits { get; set; }
         public virtual IDbSet<Cost> Costs { get; set; }
-        public virtual DbSet<Person> People { get; set; }
-        public virtual DbSet<Resident> Residents { get; set; }
-        public virtual DbSet<ResidentsCar> ResidentsCars { get; set; }
+        public virtual IDbSet<Person> People { get; set; }
+        public virtual IDbSet<Resident> Residents { get; set; }
+        public virtual IDbSet<ResidentsCar> ResidentsCars { get; set; }
+
         public static IrrcmsDbContext Create()
         {
             return new IrrcmsDbContext();
@@ -52,25 +59,39 @@ namespace IRRCMS.Models
             modelBuilder.Entity<Resident>()
                 .ToTable("Resident");
 
+            //User_Resident OneToMany Relationship.
+            modelBuilder.Entity<Resident>()
+                .HasRequired(r => r.User)
+                .WithMany(a => a.Residents)
+                .HasForeignKey(r => r.User_Id)
+                .WillCascadeOnDelete();
+
+            //Building_Resident OneToMany Relationship.
+            modelBuilder.Entity<Resident>()
+                .HasRequired(r => r.BuildingUnit)
+                .WithMany(b => b.Residents)
+                .HasForeignKey(r => r.BuildingUnit_Id);
+
+            //Resident_Resident'sCar OneToMany Relationship.
+            modelBuilder.Entity<ResidentsCar>()
+                .HasRequired(r => r.Resident)
+                .WithMany(r => r.ResidentsCars)
+                .HasForeignKey(r => r.Resident_Id)
+                .WillCascadeOnDelete();
+
+            //Person_BuildingUnit ManyToMany Relationship.
             modelBuilder.Entity<Person>()
-                .HasMany<BuildingUnit>(p => p.BuildingUnits)
-                .WithMany(b => b.Owners)
+                .HasMany(p => p.BuildingUnits)                
+                .WithMany(b => b.Owners)                
                 .Map(pb =>
-                        {
-                            pb.ToTable("Building_Owner");
-                        });
+                {                    
+                    pb.ToTable("Building_Owner");
+                });
 
-            modelBuilder.Entity<Resident>()
-               .HasRequired(r => r.Person)
-               .WithOptional(p => p.Resident);
-
-            modelBuilder.Entity<Resident>()
-                .HasRequired<Person>(p => p.Person)
-                .WithRequiredPrincipal(r => r.Resident);
-
-            modelBuilder.Entity<ApplicationUser>()
-                .HasOptional<Person>(p => p.Person)
-                .WithOptionalPrincipal(ap => ap.User);
+            //Person_ApplicationUser OneToZeroOrOne RelationShip.
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.User)
+                .WithOptionalPrincipal(u => u.Person);                
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using IRRCMS.Models;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace IRRCMS.Controllers
 {
@@ -49,6 +50,7 @@ namespace IRRCMS.Controllers
                 _userManager = value;
             }
         }
+        private IrrcmsDbContext ctx = new IrrcmsDbContext();
 
         //
         // GET: /Manage/Index
@@ -70,7 +72,10 @@ namespace IRRCMS.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                //Name = user
+                //Family = ctx.People.Where(p => p.User.Id == userId).FirstOrDefault().Family
+
             };
             return View(model);
         }

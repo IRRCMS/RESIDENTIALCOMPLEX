@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel.DataAnnotations;
 
 namespace IRRCMS.Models
@@ -79,6 +80,24 @@ namespace IRRCMS.Models
         [Display(Name = "تکرار رمز عبور")]
         [Compare("Password", ErrorMessage = "تکرار رمز عبور وارد شده با رمز وارد شده مطابقت ندارد")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "نام")]
+        public string Name { get; set; }
+
+        [Display(Name = "نام خانوادگی")]
+        public string Family { get; set; }
+
+        
+        [Required(ErrorMessage ="وارد نمودن شماره تلفن همراه الزمی است")]
+        [Phone(ErrorMessage ="لطفا شماره همراه را به طرز صحیح وارد نمایید")]
+        [Display(Name ="شماره تلفن همراه")]
+        public string CellPhone { get; set; }
+
+        [Required(ErrorMessage ="وارد کردن شماره ملی الزامی است")]
+        [RegularExpression(@"^\d{10}$", ErrorMessage = "شماره ملی باید شامل ۱۰ رقم باشد"), Display(Name = "کد ملی")]
+        [MaxLength(10)]
+        public string NationalCode { get; set; }
+
     }
 
     public class ResetPasswordViewModel

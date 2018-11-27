@@ -7,13 +7,13 @@ namespace IRRCMS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class : IMigrationMetadata
+    public sealed partial class some_corrections_in_person_user_table_relationship : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(some_corrections_in_person_user_table_relationship));
         
         string IMigrationMetadata.Id
         {
-            get { return "201811200646118_added_ResidetsCar_entity_model_class_with_one_to_many_relationship_to_Person_entity_class"; }
+            get { return "201811271209195_some_corrections_in_person_user_table_relationship"; }
         }
         
         string IMigrationMetadata.Source

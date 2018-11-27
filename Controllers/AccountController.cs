@@ -151,7 +151,13 @@ namespace IRRCMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Person = new Person { Name = model.Name, Family = model.Family,NationalCode=model.NationalCode },
+                    PhoneNumber = model.CellPhone
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
