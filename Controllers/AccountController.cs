@@ -155,7 +155,8 @@ namespace IRRCMS.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    Person = new Person { Name = model.Name, Family = model.Family,NationalCode=model.NationalCode },
+                    Person = new Person { Name = model.Name, Family = model.Family,NationalCode=model.NationalCode 
+                    , MartialStatus=model.MartialStatus,PhoneNumber=model.PhoneNumber,Gender=model.Gender },
                     PhoneNumber = model.CellPhone
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);

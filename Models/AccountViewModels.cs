@@ -98,6 +98,15 @@ namespace IRRCMS.Models
         [MaxLength(10)]
         public string NationalCode { get; set; }
 
+        [MaxLength(1), Display(Name = "جنسیت")]
+        public string Gender { get; set; }
+
+        [Display(Name = "تلفن ثابت")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = "وضعیت تاهل"), MaxLength(10)]
+        public string MartialStatus { get; set; }
+
     }
 
     public class ResetPasswordViewModel
