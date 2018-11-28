@@ -1,0 +1,80 @@
+﻿@model IRRCMS.BuildingUnit
+
+@{
+    ViewBag.Title = "حذف واحد";
+}
+
+<h2>حذف</h2>
+
+<h3>آیا از حذف این رکورد اطمینان دارید؟</h3>
+<div>
+    <h4>BuildingUnit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف واحد" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به لیست", "Index")
+        </div>
+    }
+</div>

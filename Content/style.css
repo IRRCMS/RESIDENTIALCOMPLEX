@@ -665,7 +665,7 @@ csmall2 {
 
 .footer2 { background: #191919; padding: 15px 0; color: #777; font-size: 12px; }
 	.footer2 a { color: #aaa; }
-		.footer2 a:hover { color: #fff; }
+		.footer2 a:hover { color: #aaa; }
 		.footer2 p { margin: 0; }
 
 	/*.widget-simplenav { margin-left:-5px; }		

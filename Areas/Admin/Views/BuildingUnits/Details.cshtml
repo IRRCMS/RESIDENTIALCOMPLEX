@@ -1,0 +1,74 @@
+﻿@model IRRCMS.BuildingUnit
+
+@{
+    ViewBag.Title = "  جزئیات واحد";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BuildingUnit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyCharge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyCharge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResidentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResidentId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("بازگشت به لیست", "Index")
+</p>

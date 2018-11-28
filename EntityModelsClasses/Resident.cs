@@ -13,8 +13,9 @@ namespace IRRCMS.EntityModelsClasses
         
         public int Id { get; set; }        
 
-        [Required, Display(Name = "تعداد ساکنین")]
+        [Required(ErrorMessage = " فیلد تعداد ساکنین اجباری است "), Display(Name = "تعداد ساکنین")]
         public int NumOfOccupants { get; set; }
+
 
         //This property is defined as ForeinKey of ApplicationUser with fluent API.
         public string User_Id { get; set; }

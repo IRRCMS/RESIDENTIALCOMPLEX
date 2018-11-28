@@ -203,6 +203,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BuildingUnitsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CostsController.cs" />
     <Compile Include="EntityModelsClasses\Cost.cs" />
     <Compile Include="EntityModelsClasses\Resident.cs" />
     <Compile Include="EntityModelsClasses\BuildingUnit.cs" />
@@ -357,7 +360,6 @@
     <Content Include="Scripts\isotope.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="ClassDiagram1.cd" />
     <Content Include="CodeTemplates\MvcControllerEmpty\Controller.cs.t4" />
     <Content Include="CodeTemplates\MvcControllerWithActions\Controller.cs.t4" />
@@ -372,6 +374,18 @@
     <Content Include="CodeTemplates\MvcView\Imports.include.t4" />
     <Content Include="CodeTemplates\MvcView\List.cs.t4" />
     <Content Include="CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Costs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Costs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Costs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Costs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Costs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BuildingUnits\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\BuildingUnits\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\BuildingUnits\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\BuildingUnits\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\BuildingUnits\Index.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -420,7 +434,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>

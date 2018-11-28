@@ -10,16 +10,16 @@ namespace IRRCMS.EntityModelsClasses
     {
         public int Id { get; set; }
 
-        [Required, Display(Name = "حقوق")]
+        [Required( ErrorMessage = " فیلد هزینه اجباری است "), Display(Name = "حقوق")]
         public int Wage { get; set; }
 
-        [Required, Display(Name = "تاسیسات")]
+        [Required(ErrorMessage = " فیلد تاسیسات اجباری است "), Display(Name = "تاسیسات")]
         public int Maintenance { get; set; }
 
-        [Required, Display(Name = "تاریخ")]
+        [Required(ErrorMessage = " فیلد تاریخ اجباری است "), Display(Name = "تاریخ")]
         public DateTime Date { get; set; }
 
-        [MaxLength(500), Display(Name = "توضیحات")]
+        [MaxLength(500, ErrorMessage = "حداکثر 500 کاراکتر مجاز است."), Display(Name = "توضیحات")]
 
         public string Description { get; set; }
     }
