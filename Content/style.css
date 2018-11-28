@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     margin-top: 25px;
+    color:white;
 }
 
 p {
@@ -652,7 +653,7 @@ csmall2 {
 
     #copyrights p {
         margin-bottom: 5px;
-        color: #fff;
+        color: white;
     }
 
     #copyrights a {
@@ -666,7 +667,7 @@ csmall2 {
 .footer1 {
     background: #232323;
     padding: 30px 0 0 0;
-    font-size: 12px;
+    font-size: 15px;
     color: #999;
 }
 
@@ -683,7 +684,7 @@ csmall2 {
     }
 
     .footer1 .widget-title {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: bold;
         color: #ccc;
         margin: 0 0 20px;
@@ -721,7 +722,7 @@ csmall2 {
 .footer2 {
     background: #191919;
     padding: 15px 0;
-    color: #777;
+    color: white;
     font-size: 12px;
 }
 
