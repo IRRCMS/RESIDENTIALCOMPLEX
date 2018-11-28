@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Building Management</title>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -32,16 +32,43 @@
                     </div>
                     <div class="navbar-collapse collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">خانه</a></li>
-                            <li><a href="about.html">درباره</a></li>
-                            <li><a href="contact.html">اطلاعات تماس</a></li>
+
+                            <li>
+                                <a href="@Url.Action("Index","Home")">
+                                    صفحه اصلي
+                                    <span class="fa fa-home"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="@Url.Action("Index","BuildingUnits")">
+                                    تماس با ما
+                                    <span class="fa fa-phone"></span>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="@Url.Action("Index","BuildingUnits")">
+                                    مدیریت ارتباط با مشتریان
+                                    <span class="fa fa-pencil   "></span>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="about.html">  معرفی شرکت  </a>
+                            </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">بخشهای سایت <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">خدمات سایت <b class="caret"></b></a>
+
+
+
+
                                 <ul class="dropdown-menu">
-                                    <li><a href="blog.html">BLOG</a></li>
-                                    <li><a href="single-post.html">SINGLE POST</a></li>
-                                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                                    <li><a href="single-project.html">SINGLE PROJECT</a></li>
+                                    <li><a href="blog.html">طراحی پروژه</a></li>
+                                    <li><a href="single-post.html">معرفی شرکت</a></li>
+                                    <li><a href="portfolio.html">کاتالوگ ها</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -68,11 +95,12 @@
                         <div class="col-md-3 widget">
                             <h3 class="widget-title">اطلاعات تماس</h3>
                             <div class="widget-body">
-                                <p>
-                                    +234 23 9873237<br>
-                                    <a href="mailto:#">some.email@somewhere.com</a><br>
+                                <p class="footer1">
+                                    آدرس: تهران – خیابان یوسف آباد – خیابان ابن سینا – پلاک 40
+                                    <br>  تلفن:
+                                    021-412563987
+                                    <a href="mailto:#">some.email@somewhere.com</a> <br>
                                     <br>
-                                    234 Hidden Pond Road, Ashland City, TN 37015
                                 </p>
                             </div>
                         </div>
@@ -90,55 +118,58 @@
                         </div>
 
                         <div class="col-md-6 widget">
-                            <h3 class="widget-title">Text widget</h3>
+                            <h3 class="widget-title">مدیریت ساختمان</h3>
                             <div class="widget-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
+                                <p class="footer1">
+
+                                    نرم افزار مدیریت ساختمان برای سهولت در ارتباط  افراد و مدیریت ساختمان است. مدیریت کارآمد باعث اطمینان از امنیت وکیفیت زندگی در مجموعه می شود.
+
+                                </p>
+
                             </div>
                         </div>
 
-                            
+                        <div class="col-md-6 widget">
+
+                            <ul>
+
+                                <li>
+                                    <a href="@Url.Action("Index", "AdminHome", new { Area = "Admin" })">ورود به بخش مدیریت</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "AdminHome", new { Area = "Admin" })">لینک های مرتبط</a>>
+                                </li>
+
+                            </ul>
+                            <div class="col-md-6 widget">
+
+                                <div class="col-md-6 widget ">
+                                    <div class="widget-body ">
+                                        <p class="simplenav">
+
+                                            <a href="#">ورود به بخش مدیریت</a> |
+                                            <a href="about.html">About</a> |
+
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
                         </div> <!-- /row of widgets -->
+
                     </div>
             </div>
 
             <div class="footer2">
                 <div class="container">
-                    <div class="row">
-
-
-
-
-                        <div class="col-md-6 widget">
-                            <ul>
-                                <li>
-                                    <a href="@Url.Action("Index", "Home", new { Area = "Admin" })">ورود به بخش مدیریت</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Index", "Home", new { Area = "Admin" })">لینک های مرتبط</a>>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                        <div class="col-md-6 widget">
-
-
-
+                    <div class="row" style="font-size:14px; font-family: Vazir; color:#aaa; direction:rtl;" >
+                        
                             <div class="col-md-6 widget">
-                                <div class="widget-body">
-                                    <p class="simplenav">
-                                        <a href="#">Home</a> |
-                                        <a href="about.html">About</a> |
-                                        <a href="sidebar-right.html">Sidebar</a> |
-                                        <a href="contact.html">Contact</a> |
-                                        <b><a href="signup.html">Sign up</a></b>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 widget">
-                                <div class="widget-body">
+                                <div class="widget-body ">
                                     <p class="text-right">
-                                        Copyright &copy; 2014, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+                                         &copy;تمامی حقوق این سایت متعلق به گروه ما است
                                     </p>
                                 </div>
                             </div>
