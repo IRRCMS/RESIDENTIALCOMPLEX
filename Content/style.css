@@ -35,12 +35,14 @@ body {
 }
 
 .content {
+<<<<<<< HEAD
     color: #eee;
     /*left: 0;
     right: 0;*/
+=======
+    color:#eee;
+>>>>>>> db77502a01bf44905fdd805117b4fc9350ff8647
     z-index: 0;
-    /*margin-left: 20px;
-    margin-right: 20px;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
