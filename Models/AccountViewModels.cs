@@ -107,6 +107,12 @@ namespace IRRCMS.Models
         [Display(Name = "وضعیت تاهل"), MaxLength(10)]
         public string MartialStatus { get; set; }
 
+        public enum MartialStatusEnum
+        {
+            مجرد,
+            متاهل
+        }
+
     }
 
     public class ResetPasswordViewModel
