@@ -35,13 +35,7 @@ body {
 }
 
 .content {
-<<<<<<< HEAD
     color: #eee;
-    /*left: 0;
-    right: 0;*/
-=======
-    color:#eee;
->>>>>>> db77502a01bf44905fdd805117b4fc9350ff8647
     z-index: 0;
 }
 
