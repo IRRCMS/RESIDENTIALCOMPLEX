@@ -3,7 +3,7 @@ namespace IRRCMS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class After_Drop_Database : DbMigration
+    public partial class AfterDrop : DbMigration
     {
         public override void Up()
         {
@@ -27,15 +27,18 @@ namespace IRRCMS.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 50),
-                        Family = c.String(nullable: false, maxLength: 50),
-                        NationalCode = c.String(nullable: false, maxLength: 10),
-                        Gender = c.String(nullable: false, maxLength: 1),
+                        Name = c.String(maxLength: 50),
+                        Family = c.String(maxLength: 50),
+                        NationalCode = c.String(maxLength: 10),
+                        Gender = c.String(maxLength: 1),
                         PhoneNumber = c.String(),
                         MartialStatus = c.String(maxLength: 10),
+                        User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
-                .Index(t => t.NationalCode, unique: true);
+                .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
+                .Index(t => t.NationalCode, unique: true)
+                .Index(t => t.User_Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -53,12 +56,9 @@ namespace IRRCMS.Migrations
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
                         UserName = c.String(nullable: false, maxLength: 256),
-                        Person_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Person", t => t.Person_Id)
-                .Index(t => t.UserName, unique: true, name: "UserNameIndex")
-                .Index(t => t.Person_Id);
+                .Index(t => t.UserName, unique: true, name: "UserNameIndex");
             
             CreateTable(
                 "dbo.AspNetUserClaims",
@@ -165,7 +165,7 @@ namespace IRRCMS.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.AspNetUsers", "Person_Id", "dbo.Person");
+            DropForeignKey("dbo.Person", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Resident", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.ResidentsCar", "Resident_Id", "dbo.Resident");
@@ -184,8 +184,8 @@ namespace IRRCMS.Migrations
             DropIndex("dbo.Resident", new[] { "User_Id" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
-            DropIndex("dbo.AspNetUsers", new[] { "Person_Id" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            DropIndex("dbo.Person", new[] { "User_Id" });
             DropIndex("dbo.Person", new[] { "NationalCode" });
             DropTable("dbo.Building_Owner");
             DropTable("dbo.AspNetRoles");

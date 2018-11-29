@@ -66,6 +66,8 @@ namespace IRRCMS.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+            var personId =ctx.Users.Find(userId);
+            
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -73,8 +75,14 @@ namespace IRRCMS.Controllers
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
-                //Name = user
-                //Family = ctx.People.Where(p => p.User.Id == userId).FirstOrDefault().Family
+                Name = ctx.People.Find(personId).Name,
+                Family = ctx.People.Find(personId).Family,
+                CellPhone=ctx.Users.Find(userId).PhoneNumber,
+                NationalCode= ctx.People.Find(personId).NationalCode,
+                Gender= ctx.People.Find(personId).Gender,
+                LandLinePhoneNumber= ctx.People.Find(personId).PhoneNumber,
+                MartialStatus= ctx.People.Find(personId).MartialStatus
+
 
             };
             return View(model);

@@ -24,11 +24,6 @@ namespace IRRCMS
         public string Gender { get; set; }
         [Display(Name ="تلفن ثابت")]
         public string PhoneNumber { get; set; }
-        //[Required,RegularExpression(@"^09\d{9}$",ErrorMessage ="تلفن همراه با ۰۹ آغاز میشود"),Display(Name ="تلفن همراه")]
-        //[MaxLength(11)]
-        //public string CellPhone { get; set; }
-        //[EmailAddress,Display(Name ="تلفن همراه"),MaxLength(50)]
-        //public string EmailAddress { get; set; }
         [Display(Name ="وضعیت تاهل"),MaxLength(10)]
         public string MartialStatus { get; set; }
 

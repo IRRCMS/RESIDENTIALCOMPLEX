@@ -91,7 +91,7 @@ namespace IRRCMS.Models
             //Person_ApplicationUser OneToZeroOrOne RelationShip.
             modelBuilder.Entity<Person>()
                 .HasOptional(p => p.User)
-                .WithOptionalPrincipal(u => u.Person);                
+                .WithOptionalDependent(u => u.Person);                
         }
     }
 }
