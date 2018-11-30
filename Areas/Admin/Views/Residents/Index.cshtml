@@ -5,7 +5,7 @@
 }
 
 <h2>@ViewBag.Title</h2>
-<div class="col-md-12">
+<div class="col-md-12 ResidentIndexButton" id="ResidentIndexButton">
     <p>
         <a href="@Url.Action("Create")" class="btn btn-success btn-sm ">
             <span class="fa fa-plus"></span>
@@ -13,8 +13,8 @@
         </a>
     </p>
 </div>
-<div class="table-responsive col-md-12">
-    <table class="table table-hover table-striped">
+<div class="table-responsive col-md-12 " >
+    <table id="ResidentsIndexTable" class="table table-hover table-hover">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.BuildingUnit.UnitNo)
