@@ -1,0 +1,42 @@
+﻿@model IRRCMS.EntityModelsClasses.Resident
+
+@{
+    ViewBag.Title = "جزئیات";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Resident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingUnit.UnitNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingUnit.UnitNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfOccupants)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfOccupants)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("بازگشت به لیست", "Index")
+</p>

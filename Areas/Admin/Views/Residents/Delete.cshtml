@@ -1,0 +1,48 @@
+﻿@model IRRCMS.EntityModelsClasses.Resident
+
+@{
+    ViewBag.Title = "حذف";
+}
+
+<h2>حذف</h2>
+
+<h3>آیا از حذف این رکورد اطمینان دارید؟</h3>
+<div>
+    <h4>Resident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingUnit.UnitNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildingUnit.UnitNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfOccupants)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumOfOccupants)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="حذف" class="btn btn-danger" /> |
+            @Html.ActionLink("بازگشت به لیست", "Index")
+        </div>
+    }
+</div>
