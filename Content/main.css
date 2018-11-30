@@ -21,13 +21,14 @@
 .LoginLink {
     border-top:none !important;
 }
-#ResidentsIndexTable {
-    border:0px;
+#ResidentsIndexTable th {
+    border-top: 0px;
+    border-bottom: white solid 2px;
 }
-#ResidentsIndexTable tr:hover {
-    color:black;
-    background-color:#ffffff;
-    opacity:0.4;
+#ResidentsIndexTable tr:hover:not(#ftr) {
+    color: black;
+    background-color: #ffffff;
+    opacity: 0.6;
 }
 /*.ResidentIndexButton {
     margin-top:59px;

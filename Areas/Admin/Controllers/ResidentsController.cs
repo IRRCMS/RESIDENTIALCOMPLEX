@@ -18,7 +18,7 @@ namespace IRRCMS.Areas.Admin.Controllers
         // GET: Admin/Residents
         public ActionResult Index()
         {
-            var residents = ctx.Residents.Include(r => r.BuildingUnit).Include(r => r.User);
+            var residents = ctx.Residents.Include(r => r.BuildingUnit);
             return View(residents.ToList());
         }
 
@@ -39,13 +39,12 @@ namespace IRRCMS.Areas.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo");
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,NumOfOccupants,User_Id,BuildingUnit_Id")] Resident resident)
+        public ActionResult Create([Bind(Include = "Id,NumOfOccupants,BuildingUnit_Id")] Resident resident)
         {
             if (ModelState.IsValid)
             {
@@ -55,7 +54,6 @@ namespace IRRCMS.Areas.Admin.Controllers
             }
 
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
             return View(resident);
         }
 
@@ -71,13 +69,12 @@ namespace IRRCMS.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
             return View(resident);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,NumOfOccupants,User_Id,BuildingUnit_Id")] Resident resident)
+        public ActionResult Edit([Bind(Include = "Id,NumOfOccupants,BuildingUnit_Id")] Resident resident)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +83,6 @@ namespace IRRCMS.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
             return View(resident);
         }
 

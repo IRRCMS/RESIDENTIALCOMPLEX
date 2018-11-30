@@ -7,13 +7,13 @@ namespace IRRCMS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AfterDrop : IMigrationMetadata
+    public sealed partial class changes : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AfterDrop));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changes));
         
         string IMigrationMetadata.Id
         {
-            get { return "201811291646344_AfterDrop"; }
+            get { return "201811301056597_changes"; }
         }
         
         string IMigrationMetadata.Source

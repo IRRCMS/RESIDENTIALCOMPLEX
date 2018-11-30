@@ -23,7 +23,6 @@ namespace IRRCMS.Models
         }
 
         public ICollection<Resident> Residents { get; set; }
-
         public Person Person { get; set; }
     }
 
@@ -58,13 +57,6 @@ namespace IRRCMS.Models
                 .ToTable("Cost");
             modelBuilder.Entity<Resident>()
                 .ToTable("Resident");
-
-            //User_Resident OneToMany Relationship.
-            modelBuilder.Entity<Resident>()
-                .HasRequired(r => r.User)
-                .WithMany(a => a.Residents)
-                .HasForeignKey(r => r.User_Id)
-                .WillCascadeOnDelete();
 
             //Building_Resident OneToMany Relationship.
             modelBuilder.Entity<Resident>()
