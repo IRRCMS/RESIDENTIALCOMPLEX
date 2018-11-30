@@ -66,8 +66,8 @@ namespace IRRCMS.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
-            var personId =ctx.Users.Find(userId);
-            
+            var personId = 1;
+
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
