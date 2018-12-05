@@ -93,5 +93,7 @@ namespace IRRCMS.Models
                 .HasOptional(p => p.User)
                 .WithOptionalDependent(u => u.Person);                
         }
+
+        //public System.Data.Entity.DbSet<IRRCMS.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

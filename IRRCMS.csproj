@@ -206,6 +206,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\BuildingUnitsController.cs" />
     <Compile Include="Areas\Admin\Controllers\CostsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ResidentsController.cs" />
     <Compile Include="EntityModelsClasses\Cost.cs" />
     <Compile Include="EntityModelsClasses\Resident.cs" />
     <Compile Include="EntityModelsClasses\BuildingUnit.cs" />
@@ -382,6 +383,11 @@
     <Content Include="Areas\Admin\Views\Costs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Costs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Costs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Residents\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Residents\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Residents\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Residents\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Residents\Index.cshtml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
