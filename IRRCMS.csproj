@@ -216,9 +216,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201811291646344_AfterDrop.cs" />
-    <Compile Include="Migrations\201811291646344_AfterDrop.Designer.cs">
-      <DependentUpon>201811291646344_AfterDrop.cs</DependentUpon>
+    <Compile Include="Migrations\201811301056597_changes.cs" />
+    <Compile Include="Migrations\201811301056597_changes.Designer.cs">
+      <DependentUpon>201811301056597_changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811301152485_changes1.cs" />
+    <Compile Include="Migrations\201811301152485_changes1.Designer.cs">
+      <DependentUpon>201811301152485_changes1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -442,8 +446,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811291646344_AfterDrop.resx">
-      <DependentUpon>201811291646344_AfterDrop.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811301056597_changes.resx">
+      <DependentUpon>201811301056597_changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811301152485_changes1.resx">
+      <DependentUpon>201811301152485_changes1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

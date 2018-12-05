@@ -23,7 +23,6 @@ namespace IRRCMS.Models
         }
 
         public ICollection<Resident> Residents { get; set; }
-
         public Person Person { get; set; }
     }
 
@@ -59,13 +58,6 @@ namespace IRRCMS.Models
             modelBuilder.Entity<Resident>()
                 .ToTable("Resident");
 
-            //User_Resident OneToMany Relationship.
-            modelBuilder.Entity<Resident>()
-                .HasRequired(r => r.User)
-                .WithMany(a => a.Residents)
-                .HasForeignKey(r => r.User_Id)
-                .WillCascadeOnDelete();
-
             //Building_Resident OneToMany Relationship.
             modelBuilder.Entity<Resident>()
                 .HasRequired(r => r.BuildingUnit)
@@ -94,6 +86,6 @@ namespace IRRCMS.Models
                 .WithOptionalDependent(u => u.Person);                
         }
 
-        //public System.Data.Entity.DbSet<IRRCMS.Models.ApplicationUser> ApplicationUsers { get; set; }
+        
     }
 }

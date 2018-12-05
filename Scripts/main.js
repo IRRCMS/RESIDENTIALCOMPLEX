@@ -10,8 +10,12 @@ jQuery(document).ready(function( $ ) {
 
     //$(window).resize(function () {
     //    $('.vorood').toggleClass("vorood-collapse");
-    //})        
-
+    //})    
+    var tablewResidentIndexWidth = $("#ResidentsIndexTable").width();
+    if (!(tablewResidentIndexWidth >= 690 && tablewResidentIndexWidth  < 910)) {
+        $("#ResidentIndexButton").removeClass("ResidentIndexButton")
+    }
+  
 
   $('a[data-gal]').each(function() {
     $(this).attr('rel', $(this).data('gal'));

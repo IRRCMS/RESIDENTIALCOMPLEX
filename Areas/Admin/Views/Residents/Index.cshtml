@@ -5,23 +5,21 @@
 }
 
 <h2>@ViewBag.Title</h2>
-
-<p>
-    <a href="@Url.Action("Create")" class="btn btn-success btn-sm bottom-space">
-        <span class="fa fa-plus"></span>
-        افزودن 
-    </a>
-</p>
-<div class="table-responsive">
-	<table class="table table-hover table-striped">
-		<tr>
+<div class="col-md-12" >
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-success btn-sm bottom-space">
+            <span class="fa fa-plus"></span>
+            افزودن
+        </a>
+    </p>
+</div>
+<div class="table-responsive col-md-12">
+	<table class="table " id="ResidentsIndexTable">
+		<tr id="ftr">
 					<th>
 				@Html.DisplayNameFor(model => model.BuildingUnit.UnitNo)
 			</th>
-						<th>
-				@Html.DisplayNameFor(model => model.User.Email)
-			</th>
-					<th>
+							<th>
 				@Html.DisplayNameFor(model => model.NumOfOccupants)
 			</th>
 				<th></th>
