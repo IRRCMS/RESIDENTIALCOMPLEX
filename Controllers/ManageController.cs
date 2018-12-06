@@ -83,7 +83,6 @@ namespace IRRCMS.Controllers
                 LandLinePhoneNumber= ctx.People.Find(personId).PhoneNumber,
                 MartialStatus= ctx.People.Find(personId).MartialStatus
 
-
             };
             return View(model);
         }

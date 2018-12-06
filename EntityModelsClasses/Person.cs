@@ -10,8 +10,11 @@ using System.Web;
 namespace IRRCMS
 {
     public class Person
-    {        
-        public int Id { get; set; }
+    {
+        [Key]
+        [ForeignKey("User")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string UserId { get; set; }
         [MaxLength(50, ErrorMessage = "حداکثر ۵۰ کاراکتر مجاز است."),Display(Name ="نام")]
         public string Name { get; set; }
         [MaxLength(50, ErrorMessage = "حداکثر ۵۰ کاراکتر مجاز است"),Display(Name ="نام خانوادگی")]

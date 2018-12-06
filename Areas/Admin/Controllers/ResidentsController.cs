@@ -55,7 +55,7 @@ namespace IRRCMS.Areas.Admin.Controllers
             }
 
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
+            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User.Id);
             return View(resident);
         }
 
@@ -71,7 +71,7 @@ namespace IRRCMS.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
+            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User.Id);
             return View(resident);
         }
 
@@ -86,7 +86,7 @@ namespace IRRCMS.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.BuildingUnit_Id = new SelectList(ctx.BuildingUnits, "Id", "UnitNo", resident.BuildingUnit_Id);
-            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User_Id);
+            ViewBag.User_Id = new SelectList(ctx.Residents, "Id", "Email", resident.User.Id);
             return View(resident);
         }
 

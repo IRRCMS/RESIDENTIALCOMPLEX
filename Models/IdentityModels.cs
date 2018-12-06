@@ -32,8 +32,8 @@ namespace IRRCMS.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {            
         }
-        public virtual IDbSet<BuildingUnit> BuildingUnits { get; set; }
         public virtual IDbSet<Cost> Costs { get; set; }
+        public virtual IDbSet<BuildingUnit> BuildingUnits { get; set; }
         public virtual IDbSet<Person> People { get; set; }
         public virtual IDbSet<Resident> Residents { get; set; }
         public virtual IDbSet<ResidentsCar> ResidentsCars { get; set; }
