@@ -65,8 +65,7 @@ namespace IRRCMS.Controllers
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
-            var userId = User.Identity.GetUserId();
-            var personId = 1;
+            var userId = User.Identity.GetUserId();            
 
             var model = new IndexViewModel
             {
@@ -75,13 +74,13 @@ namespace IRRCMS.Controllers
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
-                Name = ctx.People.Find(personId).Name,
-                Family = ctx.People.Find(personId).Family,
+                Name = ctx.People.Find(userId).Name,
+                Family = ctx.People.Find(userId).Family,
                 CellPhone=ctx.Users.Find(userId).PhoneNumber,
-                NationalCode= ctx.People.Find(personId).NationalCode,
-                Gender= ctx.People.Find(personId).Gender,
-                LandLinePhoneNumber= ctx.People.Find(personId).PhoneNumber,
-                MartialStatus= ctx.People.Find(personId).MartialStatus
+                NationalCode= ctx.People.Find(userId).NationalCode,
+                Gender= ctx.People.Find(userId).Gender,
+                LandLinePhoneNumber= ctx.People.Find(userId).PhoneNumber,
+                MartialStatus= ctx.People.Find(userId).MartialStatus
 
             };
             return View(model);
