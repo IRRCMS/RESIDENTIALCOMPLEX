@@ -11,10 +11,7 @@ namespace IRRCMS
 {
     public class Person
     {
-        [Key]
-        [ForeignKey("User")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string UserId { get; set; }
+        public string Id { get; set; }
         [MaxLength(50, ErrorMessage = "حداکثر ۵۰ کاراکتر مجاز است."),Display(Name ="نام")]
         public string Name { get; set; }
         [MaxLength(50, ErrorMessage = "حداکثر ۵۰ کاراکتر مجاز است"),Display(Name ="نام خانوادگی")]
@@ -31,7 +28,6 @@ namespace IRRCMS
         public string MartialStatus { get; set; }
 
         public virtual ICollection<BuildingUnit> BuildingUnits { get; set; }
-
         public ApplicationUser User { get; set; }
     }
 }

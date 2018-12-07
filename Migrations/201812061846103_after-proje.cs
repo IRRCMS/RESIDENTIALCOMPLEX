@@ -3,7 +3,7 @@ namespace IRRCMS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class after_delivery : DbMigration
+    public partial class afterproje : DbMigration
     {
         public override void Up()
         {
@@ -26,7 +26,7 @@ namespace IRRCMS.Migrations
                 "dbo.Person",
                 c => new
                     {
-                        UserId = c.String(nullable: false, maxLength: 128),
+                        Id = c.String(nullable: false, maxLength: 128),
                         Name = c.String(maxLength: 50),
                         Family = c.String(maxLength: 50),
                         NationalCode = c.String(maxLength: 10),
@@ -34,9 +34,9 @@ namespace IRRCMS.Migrations
                         PhoneNumber = c.String(),
                         MartialStatus = c.String(maxLength: 10),
                     })
-                .PrimaryKey(t => t.UserId)
-                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
-                .Index(t => t.UserId)
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AspNetUsers", t => t.Id)
+                .Index(t => t.Id)
                 .Index(t => t.NationalCode, unique: true);
             
             CreateTable(
@@ -150,13 +150,13 @@ namespace IRRCMS.Migrations
                 "dbo.Building_Owner",
                 c => new
                     {
-                        Person_UserId = c.String(nullable: false, maxLength: 128),
+                        Person_Id = c.String(nullable: false, maxLength: 128),
                         BuildingUnit_Id = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.Person_UserId, t.BuildingUnit_Id })
-                .ForeignKey("dbo.Person", t => t.Person_UserId, cascadeDelete: true)
+                .PrimaryKey(t => new { t.Person_Id, t.BuildingUnit_Id })
+                .ForeignKey("dbo.Person", t => t.Person_Id, cascadeDelete: true)
                 .ForeignKey("dbo.BuildingUnit", t => t.BuildingUnit_Id, cascadeDelete: true)
-                .Index(t => t.Person_UserId)
+                .Index(t => t.Person_Id)
                 .Index(t => t.BuildingUnit_Id);
             
         }
@@ -164,7 +164,7 @@ namespace IRRCMS.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Person", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Person", "Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Resident", "User_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.ResidentsCar", "Resident_Id", "dbo.Resident");
@@ -172,9 +172,9 @@ namespace IRRCMS.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Building_Owner", "BuildingUnit_Id", "dbo.BuildingUnit");
-            DropForeignKey("dbo.Building_Owner", "Person_UserId", "dbo.Person");
+            DropForeignKey("dbo.Building_Owner", "Person_Id", "dbo.Person");
             DropIndex("dbo.Building_Owner", new[] { "BuildingUnit_Id" });
-            DropIndex("dbo.Building_Owner", new[] { "Person_UserId" });
+            DropIndex("dbo.Building_Owner", new[] { "Person_Id" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
@@ -185,7 +185,7 @@ namespace IRRCMS.Migrations
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Person", new[] { "NationalCode" });
-            DropIndex("dbo.Person", new[] { "UserId" });
+            DropIndex("dbo.Person", new[] { "Id" });
             DropTable("dbo.Building_Owner");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Cost");

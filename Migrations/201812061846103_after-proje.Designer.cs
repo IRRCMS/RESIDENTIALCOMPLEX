@@ -7,13 +7,13 @@ namespace IRRCMS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class after_delivery : IMigrationMetadata
+    public sealed partial class afterproje : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(after_delivery));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(afterproje));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812060603231_after_delivery"; }
+            get { return "201812061846103_after-proje"; }
         }
         
         string IMigrationMetadata.Source
